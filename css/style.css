@@ -19,17 +19,19 @@
     "art2"
     "art3"
     "footer";
-    background-color: black;
+    background-image: linear-gradient(to bottom, black 7%, grey);
 }
 
 /* Header */
 header {
+    grid-area: header;
     width: 90%;
     height: fit-content;
     display: flex;
-    align-items: center;
-    margin: auto;
+    justify-self: center;
     padding: 2vw 0vw;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 2px solid white;
     border-radius: 11px;
 }
@@ -39,6 +41,8 @@ header {
 }
 
 #logo {
+    width: 18vw;
+    height: 18vw;
     margin-left: 27px;
     margin-top: 3px;
     border-radius: 50%;
@@ -46,40 +50,84 @@ header {
     animation: spin 1s linear;
 }
 
-.navbar {
+.btMenu {
+    display: block;
+    overflow: hidden;
+    margin-right: 15%;
+    margin-top: 7%;
+}
+
+#dropMenu:checked + .navMenu {
+    display: block;
+}
+
+#dropMenu {
+    display: none;
+}
+
+#imgMenu {
+    width: 11vw;
+    height: 11vw;
+}
+
+.navMenu {
+    display: none;
+    width: 33%;
     height: fit-content;
-    width: 60%;
-    margin: 0vw 1vw 0vw 3vw;
-    padding: 0vw 1vw;
-    display: flex;
+    margin: auto;
+    z-index: 27;
+    position: absolute;
+    right: 7%;
+    border-bottom-left-radius: 11px;
 }
 
-.navbar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
+.ulMenu {
+    text-align: center;
+    padding: 1vw;
 }
 
-.navbar ul li {
-    border-radius: 4px;
-    font-size: 5vw;
-    margin: 1vw 1vw;
-    padding: 2px 4px;
+.ulMenu li {
+    display: block;
+    position: relative;
 }
 
-.navbar ul li :hover {
+.ulMenu li:hover {
     color: navy;
     transition: 50ms;
     font-weight: bolder;
 }
 
+.ulMenu li a {
+    display: block;
+    font-size: 4.5vw;
+    color: white;
+    padding: 1.5vw 0vw;
+    border: 2px solid white;
+    border-radius: 11px;
+    border-collapse: collapse;
+    background-color: black;
+}
+
 #select {
-    border-bottom: 3px solid navy;
+    color: blue;
 }
 
 .navlink {
     animation: slidein 1s;
+}
+
+.toTop {
+    display: none;
+}
+
+.imgToTop {
+    width: 12vw;
+    height: 12vw;
+    position: fixed;
+    right: 7%;
+    bottom: 7%;
+    background-color: black;
+    border-radius: 50%;
 }
 
 /* Main */
@@ -112,6 +160,7 @@ header {
 
 .spanA, .spanM, .spanG {
     margin-right: 2%;
+    background-color: transparent;
 }
 
 .imgAMG {
@@ -157,9 +206,7 @@ header {
 .indexArt {
         width: 90%;
         margin: auto;
-        height: fit-content;
-        margin-bottom: 2em;
-        padding: 5px;
+        margin-bottom: 7vw;
         border-radius: 27px;
         border: 2px solid white;
 }
@@ -179,7 +226,6 @@ header {
     padding: 10px;
     border-radius: 7px;
     border: 2px solid white;
-    background-color: rgba(27, 27, 27, 1);
     align-items: center;
     justify-content: center;
     font-size: 3.7vh;
@@ -187,7 +233,7 @@ header {
 
 .artlink:hover {
     font-weight: bold;
-    background-color: navy;
+    background-image: linear-gradient(to right, navy, grey);
 }
 
 article p {
@@ -235,22 +281,21 @@ article p {
 }
 
 .navfooter {
+    width: 100%;
     height: fit-content;
     margin: auto;
-    padding: 5px;
 }
 
 .navfooter ul {
     display: flex;
-    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .navfooter ul li {
     border-radius: 4px;
     font-size: 5vw;
-    padding: 5px 4px;
+    padding: 1vw;
 }
 
 .navfooter ul li :hover {
@@ -259,7 +304,7 @@ article p {
 }
 
 .copyright {
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
     margin-top: 5px;
     padding-bottom: 10px;
@@ -287,15 +332,24 @@ article p {
 
 @media screen and (min-width: 480px){
 /* Header */
-.divNav {
-    width: 60%;
+#logo {
+    width: 16vw;
+    height: 16vw;
 }
 
-.navbar ul li {
-    border-radius: 4px;
-    font-size: 4vw;
-    margin: 1vw 1vw;
-    padding: 0vw 1vw;
+#imgMenu {
+    width: 9vw;
+    height: 9vw;
+}
+
+.ulMenu li a {
+    font-size: 3.7vw;
+    padding: 1vw 0vw;
+}
+
+.imgToTop {
+    width: 10vw;
+    height: 10vw;
 }
 
 /* Main */
@@ -311,22 +365,27 @@ article p {
     }
 
     .presentationP, .indexArt p, .artlink {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
+    .artImg {
+        width: 15vw;
+        height: 15vw;
+    }
+
+/* Footer */
     .redescircle {
         width: 8vw;
         height: 8vw;
     }
 
     .navfooter ul li {
-        border-radius: 4px;
-        font-size: 4vw;
+        font-size: 3.3vw;
         padding: 5px 4px;
     }
 
     .copyright {
-        font-size: 3vw;
+        font-size: 2.7vw;
         text-align: center;
         margin-top: 5px;
         padding-bottom: 10px;
@@ -344,35 +403,74 @@ article p {
         "indexMain"
         "indexSection"
         "footer";
-        background-color: black;
+        background-image: linear-gradient(to bottom, black 33%, grey);
     }
 
 /* Header */
     .header {
         grid-area: header;
+        padding: 0%;
+    }
+
+    #logo {
+        width: 10vw;
+        height: 10vw;
     }
 
     .divNav {
-        width: 20%;
+        width: 30%;
     }
 
-    .navbar {
-        height: 90px;
-        width: 70%;
+    .btMenu {
+        display: block;
+        overflow: hidden;
+        margin-right: 0%;
+        margin-top: 7%;
+    }
+    
+    #dropMenu {
+        display: none;
     }
 
-    .navbar ul {
+    #imgMenu {
+        display: none;
+    }
+
+    .navMenu {
+        height: fit-content;
+        width: 100%;
+        display: contents;
+    }
+
+    .ulMenu {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-end;
+        margin-right: 10%;
+    }
+    
+    .ulMenu li {
+        display: block;
+        position: relative;
     }
 
-    .navbar ul li {
-        border-radius: 4px;
-        font-size: 5vw;
-        margin: 1vw 1vw;
-        padding: 2px 4px;
+    .navMenu li a {
+        border: none;
+        border-radius: 0px;
+        font-size: 2.7vw;
+        padding: 0.5vw;
+        background-color: transparent;
+    }
+    
+    .ulMenu li a:hover, #select:hover {
+        color: navy;
+    }
+    
+    #select {
+        color: white;
+        border-bottom: 3px solid navy;
+    }
+
+    .imgToTop {
+        display: none;
     }
 
 /* Main */
@@ -387,6 +485,7 @@ article p {
     .me {
         width: 50%;
         margin: 1.5rem 0rem 2rem 0rem;
+        padding-left: 7vw;
         display: block;
         flex-wrap: nowrap;
     }
@@ -409,24 +508,24 @@ article p {
     }
 
     .imgAMG {
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
     }
 
     .presentation {
         width: 40%;
-        margin-bottom: 0rem;
+        margin: auto;
         align-self: center;
     }
 
     .presentationH1 {
         text-align: center;
-        font-size: 3.8vw;
+        font-size: 3.5vw;
     }
 
     .presentationP {
         padding: 5px;
-        font-size: 2.7vw;
+        font-size: 2.5vw;
         text-align: left;
     }
 
@@ -434,14 +533,15 @@ article p {
     .indexSection {
         grid-area: indexSection;
         display: flex;
-        width: fit-content;
+        width: 90%;
         height: fit-content;
         margin: auto;
     }
 
     .indexArt {
-        width: 30%;
+        width: 33%;
         padding-top: 3vh;
+        margin-bottom: 3vw;
     }
 
     .indexArt p {
@@ -453,7 +553,12 @@ article p {
     }
 
     .art1, .art2 {
-        padding-bottom: 3.3vw;
+        padding-bottom: 2.7vw;
+    }
+
+    .artImg {
+        width: 11vw;
+        height: 11vw;
     }
 
 /* Footer */
@@ -470,12 +575,6 @@ article p {
         margin: 0px 2vw;
     }
 
-    .navfooter {
-        height: fit-content;
-        margin: auto;
-        padding: 5px;
-    }
-
     .navfooter ul {
         justify-content: center;
     }
@@ -488,6 +587,86 @@ article p {
     .copyright {
         font-size: 2.5vw;
         margin-bottom: 2vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+/* Header */
+    header {
+        height: auto;
+        padding: 0%;
+    }
+
+    #logo {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .ulMenu li a {
+        font-size: 2.1vw;
+        padding: 1vw 0vw;
+    }
+
+/* Main */
+    .textMe {
+        font-size: 4.5vw;
+    }
+
+    .imgAMG {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .presentationH1 {
+        font-size: 2.7vw;
+    }
+
+    .presentationP {
+        font-size: 2vw;
+    }
+
+/* Section */
+    .indexArt {
+        width: 33%;
+        padding-top: 3vh;
+    }
+
+    .indexArt p {
+        font-size: 1.7vw;
+    }
+
+    a .artlink {
+        font-size: 1.5vw;
+    }
+
+    .art1, .art2 {
+        padding-bottom: 2vw;
+    }
+
+    .artImg {
+        width: 8vw;
+        height: 8vw;
+    }
+
+/* Footer*/
+    .redes {
+        height: fit-content;
+    }
+    .redescircle {
+        width: 4vw;
+        height: 4vw;
+    }
+    .navfooter ul li {
+        padding: 0vw;
+    }
+
+    .navfooter li a {
+        font-size: 2vw;
+    }
+
+    .copyright {
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
     }
 }
 
@@ -506,7 +685,7 @@ article p {
     "work"
     "work"
     "footer";
-    background-color: black;
+    background-image: linear-gradient(to bottom, black 7%, grey);
 }
 
 /* Header */
@@ -525,7 +704,7 @@ article p {
     width: 95%;
     margin: auto;
     margin-top: 5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 5vw;
     padding: 0vw 2vw;
     border-top: 3px solid white;
     border-top-left-radius: 11px;
@@ -612,7 +791,6 @@ article p {
         "portMain"
         "portSection"
         "footer";
-        background-color: black;
     }
 
 /* Main */
@@ -620,6 +798,11 @@ article p {
         grid-area: portMain;
     }
 
+    .mainText {
+        margin-top: 2.7vw;
+        margin-bottom: 2.7vw;
+    }
+    
     .mainText h2 {
         font-size: 3vw;
         margin-bottom: 3vw;
@@ -643,6 +826,35 @@ article p {
     }
 }
 
+@media screen and (min-width: 1024px) {
+/* Main */
+    .mainText h2 {
+        text-align: center;
+        font-size: 2.2vw;
+        margin-bottom: 2vw;
+    }
+
+    .mainText p {
+        font-size: 1.9vw;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
+    .sectionWork {
+        margin: auto;
+        justify-content: center;
+    }
+
+    .work {
+        grid-area: work;
+        width: 22vw;
+        height: 22vw;
+        margin: auto;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+        margin-bottom: 2vw;
+    }
+}
+
 /*              MY SKILLS              */
 .skillsBody {
     display: grid;
@@ -657,7 +869,7 @@ article p {
     "skillsSection"
     "skillsSection"
     "footer";
-    background-color: black;
+    background-image: linear-gradient(to bottom, black 7%, grey);
 }
 
 /* Header */
@@ -833,17 +1045,22 @@ article p {
 
 @media screen and (min-width: 768px){
 /* Main */
+    .skillsText {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
     .skillsText h1 {
-        font-size: 5vw;
+        font-size: 3.7vw;
     }
 
     .skillsText p {
-        margin: 2vw 0vw;
-        font-size: 3vw;
+        margin: 1vw 0vw;
+        font-size: 2.5vw;
     }
 
     .skillsIndicator {
-        margin-bottom: 3vw;
+        margin-bottom: 1vw;
     }
 
 /* Section */
@@ -852,6 +1069,23 @@ article p {
         width: 40%;
         padding: 5px;
         margin: 3vw 0vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+/* Main */
+    .skillsText h1 {
+        font-size: 2.7vw;
+    }
+
+    .skillsText p {
+        margin: 1vw 0vw;
+        font-size: 2vw;
+    }
+/* Section */
+    .skillsSection {
+        width: 45%;
+        margin: 2vw 0vw;
     }
 }
 
@@ -866,7 +1100,7 @@ article p {
     "aboutH1"
     "aboutP"
     "footer";
-    background-color: black;
+    background-image: linear-gradient(to bottom, black 7%, grey);
 }
 
 /* Header */
@@ -954,6 +1188,30 @@ article p {
     }
 }
 
+@media screen and (min-width: 1024px){
+/* Main */
+    .foto {
+        margin: 3vw 0vw 2vw 0vw;
+    }
+    .aboutH1 {
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    }
+
+    .aboutFl {
+        font-size: 4vw;
+        color: navy;
+    }
+
+    .aboutP {
+        font-size: 2vw;
+        margin-bottom: 3vw;
+        padding: 0vw 1vw;
+        text-indent: 2vw;
+        border-left: 5px solid navy;
+    }
+}
+
 /*              CONTACT             */
 .contactBody {
     display: grid;
@@ -964,7 +1222,7 @@ article p {
     "contactMain"
     "divForm"
     "footer";
-    background-color: black;
+    background-image: linear-gradient(to bottom, black 7%, grey);
 }
 
 /* Header */
@@ -1181,5 +1439,53 @@ form {
 
     .contactMap:hover {
         border: 3px solid navy;
+    }
+}
+
+@media screen and (min-width: 1024px){
+/* Main */
+    .contactText {
+        margin: 2vw 0vw 3vw 0vw;
+    }
+
+    .contactH1 {
+        font-size: 2.7vw;
+        padding: 0.5vw;
+    }
+    
+    .contactP {
+        font-size: 1.7vw;
+        padding: 0vw;
+    }
+
+    .divGeneral {
+        width: 80%;
+        padding-bottom: 0%;
+    }
+    .divForm {
+        width: 50%;
+        padding-left: 1vw;
+    }
+    .contactInput1 {
+        padding: 0.5vw;
+        margin-bottom: 0vw;
+        font-size: 1.3vw;
+    }
+
+    .contactInput {
+        padding: 0.5vw;
+        margin-bottom: 1vw;
+        font-size: 1.3vw;
+    }
+
+    .contactTextarea {
+        padding: 0.5vw;
+        margin-bottom: 2vw;
+        font-size: 1.3vw;
+    }
+
+    .contactMap iframe {
+        width: 35vw;
+        height: 35vw;
     }
 }
