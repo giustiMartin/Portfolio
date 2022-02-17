@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/amg_fav.png">
     <link rel="stylesheet" href="css/style.css">
     <title>AMG - Contact</title>
 </head>
 <body class="contactBody">
 <!-- Header -->
-    <header id="header">
-        <div class="divNav">
-            <a href="index.html">
-                <img src="images/amg_logo.png" alt="AMG Logo" title="Home" width="80" height="80" id="logo">
-            </a>
-        </div>
-        <div class="btMenu">
-            <label for="dropMenu" class="checkMenu"><img src="https://icongr.am/entypo/menu.svg?size=148&color=ffffff" alt="" id="imgMenu"></label>
-            <input type="checkbox" id="dropMenu">
-            <nav class="navMenu">
-                <ul class="ulMenu">
-                    <li class="navitem">
-                        <a class="navlink" href="index.html">Home</a>
+    <header class="header container-fluid col-10" id="header">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/amg_logo.png" alt="AMG Logo" title="Home" width="80" height="80" id="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="navitem">
-                        <a class="navlink" href="portfolio.html">Portfolio</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                     </li>
-                    <li class="navitem">
-                        <a class="navlink" href="myskills.html">Skills</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myskills.html">Skills</a>
                     </li>
-                    <li class="navitem">
-                        <a class="navlink" href="about.html">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="navitem">
-                        <a class="navlink" href="contact.html" id="select">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" id="select">Contact</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+            </div>
+        </nav>
     </header>
     <div>
         <a href="#header">
@@ -72,7 +75,7 @@
         </div>
     </main>
 <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer container-fluid col-10">
         <div class="redes">
             <ul>
                 <li class="redesitem">
@@ -124,5 +127,6 @@
             Copyright &copy; 2022 &#8226; Alberto Martin Giusti Desarrollador web &#8226; Argentina
         </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

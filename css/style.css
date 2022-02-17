@@ -1,119 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
+/*              INDEX               */
+/* Body */
+.indexBody, .portBody, .skillsBody, .aboutBody, .contactBody {
     box-sizing: border-box;
     color: white;
+    background-image: linear-gradient(to bottom, black 11%, grey);
 }
 
-/* Body */
-.indexBody {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: 
-    "header"
-    "indexMain"
-    "art1"
-    "art2"
-    "art3"
-    "footer";
-    background-image: linear-gradient(to bottom, black 7%, grey);
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Header */
-header {
-    grid-area: header;
-    width: 90%;
-    height: fit-content;
-    display: flex;
+.header {
     justify-self: center;
-    padding: 2vw 0vw;
-    align-items: center;
-    justify-content: space-between;
     border-bottom: 2px solid white;
     border-radius: 11px;
 }
 
-.divNav {
-    width: 50%;
+.navbar {
+    width: 100%;
 }
 
 #logo {
-    width: 18vw;
-    height: 18vw;
-    margin-left: 27px;
-    margin-top: 3px;
+    width: 17vw;
+    height: 17vw;
+    margin-left: 3vw;
     border-radius: 50%;
     border: 2px solid white;
     animation: spin 1s linear;
 }
 
-.btMenu {
-    display: block;
-    overflow: hidden;
-    margin-right: 15%;
-    margin-top: 7%;
-}
-
-#dropMenu:checked + .navMenu {
-    display: block;
-}
-
-#dropMenu {
-    display: none;
-}
-
-#imgMenu {
-    width: 11vw;
-    height: 11vw;
-}
-
-.navMenu {
-    display: none;
-    width: 33%;
-    height: fit-content;
-    margin: auto;
-    z-index: 27;
-    position: absolute;
-    right: 7%;
-    border-bottom-left-radius: 11px;
-}
-
-.ulMenu {
-    text-align: center;
+.navbar-toggler {
+    margin-right: 5vw;
     padding: 1vw;
 }
 
-.ulMenu li {
-    display: block;
-    position: relative;
+.navbar-toggler-icon {
+    width: 7vw;
+    height: 7vw;
 }
 
-.ulMenu li:hover {
-    color: navy;
-    transition: 50ms;
-    font-weight: bolder;
-}
-
-.ulMenu li a {
-    display: block;
-    font-size: 4.5vw;
-    color: white;
-    padding: 1.5vw 0vw;
-    border: 2px solid white;
-    border-radius: 11px;
-    border-collapse: collapse;
-    background-color: black;
+.navbar-collapse {
+    height: fit-content;
+    margin-top: 1vw;
+    border-bottom-left-radius: 11px;
 }
 
 #select {
     color: blue;
 }
 
-.navlink {
+.nav-link {
+    display: block;
+    width: 100%;
+    font-size: 4.5vw;
+    text-align: center;
+    color: white;
+    padding: 1vw 0vw;
+    border: 2px solid white;
+    border-radius: 11px;
+    background-color: black;
     animation: slidein 1s;
+}
+
+.nav-link:hover {
+    background-image: linear-gradient(to right, navy, grey)
 }
 
 .toTop {
@@ -155,12 +115,12 @@ header {
     font-size: 1.8rem;
     letter-spacing: 0.1em;
     text-align: center;
+    margin: 0;
     padding: 2% 0%;
 }
 
 .spanA, .spanM, .spanG {
     margin-right: 2%;
-    background-color: transparent;
 }
 
 .imgAMG {
@@ -204,11 +164,11 @@ header {
 }
 
 .indexArt {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 7vw;
-        border-radius: 27px;
-        border: 2px solid white;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 7vw;
+    border-radius: 27px;
+    border: 2px solid white;
 }
 
 .artImg {
@@ -244,8 +204,6 @@ article p {
 
 /* Footer */
 .footer {
-    grid-area: footer;
-    width: 90%;
     height: fit-content;
     margin: auto;
     border-radius:11px;
@@ -253,7 +211,6 @@ article p {
 }
 
 .redes {
-    width: 100%;
     height: fit-content;
 }
 
@@ -272,7 +229,9 @@ article p {
 .redes ul {
     display: flex;
     justify-content: center;
+    padding: 0;
     padding-top: 5px;
+    margin: auto;
 }
 
 .redes ul li {
@@ -284,17 +243,20 @@ article p {
     width: 100%;
     height: fit-content;
     margin: auto;
+    font-weight: bolder;
 }
 
 .navfooter ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navfooter ul li {
     border-radius: 4px;
-    font-size: 5vw;
+    font-size: 4vw;
     padding: 1vw;
 }
 
@@ -332,25 +294,15 @@ article p {
 
 @media screen and (min-width: 480px){
 /* Header */
-#logo {
-    width: 16vw;
-    height: 16vw;
-}
+    #logo {
+        width: 16vw;
+        height: 16vw;
+    }
 
-#imgMenu {
-    width: 9vw;
-    height: 9vw;
-}
-
-.ulMenu li a {
-    font-size: 3.7vw;
-    padding: 1vw 0vw;
-}
-
-.imgToTop {
-    width: 10vw;
-    height: 10vw;
-}
+    .imgToTop {
+        width: 10vw;
+        height: 10vw;
+    }
 
 /* Main */
     .textMe {
@@ -392,23 +344,36 @@ article p {
     }
 }
 
-@media screen and (min-width: 768px) {
-/* Body */
-    .indexBody {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-        "header"
-        "indexMain"
-        "indexSection"
-        "footer";
-        background-image: linear-gradient(to bottom, black 33%, grey);
+@media screen and (min-width: 576px){
+/* Header */
+    .navbar-brand {
+        width: 30%;
     }
+
+    #logo {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .nav-link {
+        font-size: 3vw;
+        padding: 0vw 0vw;
+        border: none;
+    }
+
+    #select {
+        border-bottom: 3px solid navy;
+    }
+
+    .imgToTop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
 
 /* Header */
     .header {
-        grid-area: header;
         padding: 0%;
     }
 
@@ -417,65 +382,14 @@ article p {
         height: 10vw;
     }
 
-    .divNav {
-        width: 30%;
-    }
-
-    .btMenu {
-        display: block;
-        overflow: hidden;
-        margin-right: 0%;
-        margin-top: 7%;
-    }
-    
-    #dropMenu {
-        display: none;
-    }
-
-    #imgMenu {
-        display: none;
-    }
-
-    .navMenu {
-        height: fit-content;
-        width: 100%;
-        display: contents;
-    }
-
-    .ulMenu {
-        display: flex;
-        margin-right: 10%;
-    }
-    
-    .ulMenu li {
-        display: block;
-        position: relative;
-    }
-
-    .navMenu li a {
+    .nav-link {
+        font-size: 3vw;
+        margin: 0vw 1vw;
         border: none;
-        border-radius: 0px;
-        font-size: 2.7vw;
-        padding: 0.5vw;
-        background-color: transparent;
-    }
-    
-    .ulMenu li a:hover, #select:hover {
-        color: navy;
-    }
-    
-    #select {
-        color: white;
-        border-bottom: 3px solid navy;
-    }
-
-    .imgToTop {
-        display: none;
     }
 
 /* Main */
     .indexMain {
-        grid-area: indexMain;
         margin: auto;
         display: flex;
         flex-wrap: nowrap;
@@ -531,7 +445,6 @@ article p {
 
 /* Section */
     .indexSection {
-        grid-area: indexSection;
         display: flex;
         width: 90%;
         height: fit-content;
@@ -562,10 +475,6 @@ article p {
     }
 
 /* Footer */
-    .footer {
-        grid-area: footer;
-    }
-
     .redescircle {
         width: 6vw;
         height: 6vw;
@@ -590,21 +499,18 @@ article p {
     }
 }
 
+@media screen and (min-width: 992px){
+    .nav-link {
+        font-size: 2.5vw;
+    }
+}
+
 @media screen and (min-width: 1024px) {
 /* Header */
-    header {
-        height: auto;
-        padding: 0%;
-    }
 
     #logo {
         width: 8vw;
         height: 8vw;
-    }
-
-    .ulMenu li a {
-        font-size: 2.1vw;
-        padding: 1vw 0vw;
     }
 
 /* Main */
@@ -671,28 +577,6 @@ article p {
 }
 
 /*              PORTFOLIO               */
-.portBody {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(9, auto);
-    grid-template-areas: 
-    "header"
-    "mainText"
-    "work"
-    "work"
-    "work"
-    "work"
-    "work"
-    "work"
-    "footer";
-    background-image: linear-gradient(to bottom, black 7%, grey);
-}
-
-/* Header */
-.header {
-    grid-area: header;
-}
-
 /* Main */
 .portMain {
     width: 90%;
@@ -700,7 +584,6 @@ article p {
 }
 
 .mainText {
-    grid-area: headerText;
     width: 95%;
     margin: auto;
     margin-top: 5vw;
@@ -732,7 +615,6 @@ article p {
 }
 
 .work {
-    grid-area: work;
     width: 43vw;
     height: 43vw;
     margin: auto;
@@ -752,11 +634,6 @@ article p {
     border-radius: 11px;
 }
 
-/* Footer */
-.footer {
-    grid-area: footer;
-}
-
 @media screen and (min-width: 480px){
 /* Main */
     .mainText h2 {
@@ -770,7 +647,6 @@ article p {
     }
 
     .work {
-        grid-area: work;
         width: 28vw;
         height: 28vw;
         margin: auto;
@@ -781,23 +657,7 @@ article p {
 }
 
 @media screen and (min-width: 768px){
-/* Body */
-    .portBody {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-        "header"
-        "portMain"
-        "portSection"
-        "footer";
-    }
-
 /* Main */
-    .portMain {
-        grid-area: portMain;
-    }
-
     .mainText {
         margin-top: 2.7vw;
         margin-bottom: 2.7vw;
@@ -813,12 +673,7 @@ article p {
         margin-bottom: 1vw;
     }
 
-    .portSection {
-        grid-area: portSection;
-    }
-
     .work {
-        grid-area: work;
         width: 27vw;
         height: 27vw;
         margin: auto;
@@ -845,7 +700,6 @@ article p {
     }
 
     .work {
-        grid-area: work;
         width: 22vw;
         height: 22vw;
         margin: auto;
@@ -854,29 +708,7 @@ article p {
         margin-bottom: 2vw;
     }
 }
-
-/*              MY SKILLS              */
-.skillsBody {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(8, auto);
-    grid-template-areas: 
-    "header"
-    "skillsText"
-    "skillsIndicator"
-    "skillsSection"
-    "skillsSection"
-    "skillsSection"
-    "skillsSection"
-    "footer";
-    background-image: linear-gradient(to bottom, black 7%, grey);
-}
-
-/* Header */
-.header {
-    grid-area: header;
-}
-
+/*              MY SKILLS               */
 /* Main */
 .skillsMain {
     width: 90%;
@@ -886,7 +718,7 @@ article p {
 .skillsText {
     grid-area: skillsText;
     text-align: center;
-    width: 95%;
+    width: 85%;
     margin: auto;
     margin-top: 5vw;
     margin-bottom: 5vw;
@@ -974,6 +806,7 @@ article p {
     background-color: purple;
 }
 
+/* Section */
 .skillsDivSection {
     width: 90%;
     margin: auto;
@@ -1027,10 +860,6 @@ article p {
     background-color: rgba(128, 0, 128, 0.3);
 }
 
-.footer {
-    grid-area: footer;
-}
-
 @media screen and (min-width: 480px){
 /* Main */
     .skillsText h1 {
@@ -1065,7 +894,6 @@ article p {
 
 /* Section */
     .skillsSection {
-        grid-area: skillsSection;
         width: 40%;
         padding: 5px;
         margin: 3vw 0vw;
@@ -1090,27 +918,8 @@ article p {
 }
 
 /*              ABOUT               */
-.aboutBody {
-    display: grid;
-    grid-template-columns: 1 fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: 
-    "header"
-    "divFoto"
-    "aboutH1"
-    "aboutP"
-    "footer";
-    background-image: linear-gradient(to bottom, black 7%, grey);
-}
-
-/* Header */
-.header {
-    grid-area: header;
-}
-
 /* Main */
 .divFoto {
-    grid-area: divFoto;
     display: flex;
     margin-top: 5px;
     padding: 10px;
@@ -1125,7 +934,6 @@ article p {
 }
 
 .aboutH1 {
-    grid-area: aboutH1;
     text-align: center;
     padding: 1vw;
     margin: 3vw 0vw;
@@ -1137,7 +945,6 @@ article p {
 }
 
 .aboutP {
-    grid-area: aboutP;
     width: 85%;
     margin: auto;
     margin-bottom: 5vw;
@@ -1147,11 +954,6 @@ article p {
     border-left: 4px solid navy;
     border-top-left-radius: 11px;
     border-bottom-left-radius: 11px;
-}
-
-/* Footer */
-.footer {
-    grid-area: footer;
 }
 
 @media screen and (min-width: 480px){
@@ -1213,26 +1015,8 @@ article p {
 }
 
 /*              CONTACT             */
-.contactBody {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas: 
-    "header"
-    "contactMain"
-    "divForm"
-    "footer";
-    background-image: linear-gradient(to bottom, black 7%, grey);
-}
-
-/* Header */
-.header {
-    grid-area: header;
-}
-
 /* Main */
 .contactMain {
-    grid-area: contactMain;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1260,7 +1044,6 @@ article p {
 }
 
 .divForm {
-    grid-area: divForm;
     width: 90%;
     margin: auto;
 }
@@ -1361,11 +1144,6 @@ form {
     display: none;
 }
 
-/* Footer */
-.footer {
-    grid-area: footer;
-}
-
 @media screen and (min-width: 480px) {
 
 /* Main */
@@ -1382,18 +1160,7 @@ form {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .contactBody {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,auto);
-        grid-template-areas: 
-        "header"
-        "contactMain"
-        "divGeneral"
-        "footer";
-    }
-
+@media screen and (min-width: 768px){
 /* Main */
     .contactText {
         margin: 2vw 0vw 3vw 0vw;
@@ -1410,7 +1177,6 @@ form {
     }
 
     .divGeneral {
-        grid-area: divGeneral;
         width: 90%;
         padding: 1vw 0;
         margin-bottom: 1vw;
@@ -1443,7 +1209,7 @@ form {
 }
 
 @media screen and (min-width: 1024px){
-/* Main */
+    /* Main */
     .contactText {
         margin: 2vw 0vw 3vw 0vw;
     }
