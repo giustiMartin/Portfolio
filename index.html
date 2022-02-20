@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/amg_fav.png">
     <link rel="stylesheet" href="css/style.css">
     <title>AMG - Home</title>
 </head>
 <body class="indexBody">
 <!-- Header -->
-    <header class="header container-fluid col-10" id="header">
+    <header class="header container-fluid col-11" id="header">
         <nav class="navbar navbar-expand-sm navbar-dark">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/amg_logo.png" alt="AMG Logo" title="Home" width="80" height="80" id="logo">
@@ -69,43 +68,38 @@
         </div>
     </main>
 <!-- Section -->
-    <section class="indexSection">
-        <article class="indexArt art1">
-            <img src="images/index/portfolio.png" alt="Portfolio"  title="Portfolio" width="100" height="100" class="artImg">
-            <p>
-                Soy un desarrollador web interesado en nuevos desafíos y enfocado en potenciar, desde el diseño y la programación, proyectos de emprendedores.
-            </p>
-            <a href="portfolio.html" target="_blank">
-                <p class="artlink" id="linkportfolio">
-                    Más de mis trabajos <i class="fas fa-chevron-right"></i></i>
+    <section class="container-fluid secCards">
+        <div class="card">
+            <img src="images/index/portfolio.png" class="card-img-top" alt="Portfolio" title="Portfolio">
+            <div class="card-body">
+                <h5 class="card-title">Works</h5>
+                <p class="card-text">Soy un desarrollador web interesado en nuevos desafíos y enfocado en potenciar, desde el diseño y la programación, proyectos de emprendedores.
                 </p>
-            </a>
-        </article>
-        <article class="indexArt art2">
-            <img src="images/index/skills.png" alt="Skills" title="Skills" width="100" height="100" class="artImg">
-            <p>
-                Mi inicio en la progranación fue a través de HTML. A partir de allí fui sumando conocimientos y tecnologías para potenciar mis trabajos.
-            </p>
-            <a href="myskills.html" target="_blank">
-                <p class="artlink" id="linkmyskills">
-                    Más sobre mis habilidades <i class="fas fa-chevron-right"></i></i>
+                <a href="portfolio.html" target="_blank" class="btn">Más de mis trabajos <img src="https://icongr.am/feather/chevrons-right.svg?size=27&color=ffffff"></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/index/skills.png" class="card-img-top" alt="Portfolio" title="Portfolio">
+            <div class="card-body">
+                <h5 class="card-title">Skills</h5>
+                <p class="card-text">Mi inicio en la progranación fue a través de HTML. A partir de allí fui sumando conocimientos y tecnologías para potenciar mis trabajos
                 </p>
-            </a>
-        </article>
-        <article class="indexArt art3">
-            <img src="images/index/my_history.png" alt="About me" title="About" width="100" height="100" class="artImg">
-            <p>
-                Conocí la programación a mediados de 2021 pensando que sería una herramienta más, pero la fascincación que me generó hizo que ese hobby se transformara en mi profesión.
-            </p>
-            <a href="about.html" target="_blank">
-                <p class="artlink" id="linkabout">
-                    Más de mi historia <i class="fas fa-chevron-right"></i></i>
+                <br>
+                <a href="myskills.html" target="_blank" class="btn">Más sobre mis habilidades <img src="https://icongr.am/feather/chevrons-right.svg?size=27&color=ffffff"></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/index/my_history.png" class="card-img-top" alt="Portfolio" title="Portfolio">
+            <div class="card-body">
+                <h5 class="card-title">About</h5>
+                <p class="card-text">Conocí la programación a mediados de 2021 pensando que sería una herramienta más, pero la fascincación que me generó hizo que ese hobby se transformara en mi profesión.
                 </p>
-            </a>
-        </article>
+                <a href="about.html" target="_blank" class="btn">Más de mi historia <img src="https://icongr.am/feather/chevrons-right.svg?size=27&color=ffffff"></a>
+            </div>
+        </div>
     </section>
 <!-- Footer -->
-    <footer class="footer container-fluid col-10">
+    <footer class="footer container-fluid col-11">
         <div class="redes">
             <ul>
                 <li class="redesitem">

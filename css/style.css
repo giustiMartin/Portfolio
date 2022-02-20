@@ -1,4 +1,10 @@
 /*              INDEX               */
+* {
+    box-sizing: border-box !important;
+    font-family: 'Inconsolata', monospace !important;
+    color: white !important;
+}
+
 /* Body */
 .indexBody, .portBody, .skillsBody, .aboutBody, .contactBody {
     box-sizing: border-box;
@@ -6,16 +12,11 @@
     background-image: linear-gradient(to bottom, black 11%, grey);
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 ul {
     list-style-type: none;
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -56,7 +57,7 @@ a {
 }
 
 #select {
-    color: blue;
+    color: blue !important; 
 }
 
 .nav-link {
@@ -73,7 +74,7 @@ a {
 }
 
 .nav-link:hover {
-    background-image: linear-gradient(to right, navy, grey)
+    color: blue !important;
 }
 
 .toTop {
@@ -112,7 +113,7 @@ a {
 
 .textMe {
     width: 50%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1em;
     text-align: center;
     margin: 0;
@@ -126,13 +127,12 @@ a {
 .imgAMG {
     width: 2.7rem;
     height: 2.7rem;
+    margin-bottom: 23px;
 }
 
 .presentation {
     width: 100%;
-    margin-bottom: 2rem;
-    height: auto;
-    padding: 10px;
+    padding-top: 5px;
     border-radius: 7px;
     border-top:  2px solid white;
     border-bottom: 2px solid white;
@@ -151,55 +151,37 @@ a {
 }
 
 /* Section */
-.art1 {
-    grid-area: art1;
-}
-
-.art2 {
-    grid-area: art2;
-}
-
-.art3 {
-    grid-area: art3;
-}
-
-.indexArt {
+.container-fluid {
     width: 90%;
-    margin: auto;
-    margin-bottom: 7vw;
-    border-radius: 27px;
-    border: 2px solid white;
 }
 
-.artImg {
-    display: flex;
+.card {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 11px;
+    background-color: transparent;
+}
+
+.card-img-top {
     margin: auto;
-    margin-top: 1vh;
-    border: 2px solid black;
     border-radius: 50%;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
 }
 
-.artlink {
-    width: fit-content;
-    margin: auto;
-    margin-bottom: 1em;
-    padding: 10px;
-    border-radius: 7px;
-    border: 2px solid white;
-    align-items: center;
-    justify-content: center;
-    font-size: 3.7vh;
+.btn {
+    border: 2px solid black;
+    border-radius: 11px;
 }
 
-.artlink:hover {
-    font-weight: bold;
-    background-image: linear-gradient(to right, navy, grey);
-}
-
-article p {
-    font-size: 1.2rem;
-    text-align: left;
-    padding: 1.5rem;
+.btn:hover {
+    background-image: linear-gradient(to right, navy, gray);
+    transform: scale(1.1);
+    font-weight: bolder;
 }
 
 /* Footer */
@@ -261,7 +243,7 @@ article p {
 }
 
 .navfooter ul li :hover {
-    color: navy;
+    color: navy !important;
     transition: 50ms;
 }
 
@@ -307,22 +289,16 @@ article p {
 /* Main */
     .textMe {
         width: 33.33%;
-        font-size: 6.8vw;
-        text-align: end;
+        font-size: 5.3vw;
     }
 
     .imgAMG {
-        width: 8vh;
-        height: 8vh;
+        width: 7.5vh;
+        height: 7.5vh;
     }
 
-    .presentationP, .indexArt p, .artlink {
+    .presentationP {
         font-size: 3.5vw;
-    }
-
-    .artImg {
-        width: 15vw;
-        height: 15vw;
     }
 
 /* Footer */
@@ -362,16 +338,25 @@ article p {
     }
 
     #select {
+        color: white !important;
         border-bottom: 3px solid navy;
     }
 
     .imgToTop {
         display: none;
     }
+
+    /* Section */
+    .container-fluid {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 768px) {
-
+/* Body */
+    .indexBody, .portBody, .skillsBody, .aboutBody, .contactBody {
+        background-image: linear-gradient(to bottom, black 40%, grey);
+}
 /* Header */
     .header {
         padding: 0%;
@@ -385,6 +370,7 @@ article p {
     .nav-link {
         font-size: 3vw;
         margin: 0vw 1vw;
+        padding: 0 !important;
         border: none;
     }
 
@@ -393,15 +379,13 @@ article p {
         margin: auto;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
     }
 
     .me {
-        width: 50%;
+        width: 45%;
         margin: 1.5rem 0rem 2rem 0rem;
-        padding-left: 7vw;
+        padding-left: 2vw;
         display: block;
-        flex-wrap: nowrap;
     }
 
     .textMe {
@@ -427,51 +411,31 @@ article p {
     }
 
     .presentation {
-        width: 40%;
+        width: 45%;
         margin: auto;
         align-self: center;
     }
 
     .presentationH1 {
         text-align: center;
-        font-size: 3.5vw;
+        font-size: 3.3vw;
     }
 
     .presentationP {
-        padding: 5px;
-        font-size: 2.5vw;
+        font-size: 2.2vw;
         text-align: left;
     }
 
-/* Section */
-    .indexSection {
-        display: flex;
+    /* Section */
+    .secCards {
         width: 90%;
-        height: fit-content;
-        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
-
-    .indexArt {
-        width: 33%;
-        padding-top: 3vh;
-        margin-bottom: 3vw;
-    }
-
-    .indexArt p {
-        font-size: 2.3vw;
-    }
-
-    a .artlink {
-        font-size: 2vw;
-    }
-
-    .art1, .art2 {
-        padding-bottom: 2.7vw;
-    }
-
-    .artImg {
-        width: 11vw;
-        height: 11vw;
+    .card {
+        width: 32%;
     }
 
 /* Footer */
@@ -531,29 +495,6 @@ article p {
         font-size: 2vw;
     }
 
-/* Section */
-    .indexArt {
-        width: 33%;
-        padding-top: 3vh;
-    }
-
-    .indexArt p {
-        font-size: 1.7vw;
-    }
-
-    a .artlink {
-        font-size: 1.5vw;
-    }
-
-    .art1, .art2 {
-        padding-bottom: 2vw;
-    }
-
-    .artImg {
-        width: 8vw;
-        height: 8vw;
-    }
-
 /* Footer*/
     .redes {
         height: fit-content;
@@ -584,7 +525,7 @@ article p {
 }
 
 .mainText {
-    width: 95%;
+    width: 85%;
     margin: auto;
     margin-top: 5vw;
     margin-bottom: 5vw;
@@ -738,7 +679,6 @@ article p {
 }
 
 .skillsIndicator {
-    grid-area: skillsIndicator;
     width: 85%;
     margin: auto;
     padding: 10px;
@@ -777,7 +717,13 @@ article p {
 }
 
 #secIndGit {
-    border: 1px solid purple;
+    border: 1px solid rgb(27, 27, 27);
+    border-radius: 11px;
+    margin-top: 3px;
+}
+
+#secIndBs {
+    border: 1px solid blueviolet;
     border-radius: 11px;
     margin-top: 3px;
 }
@@ -803,7 +749,13 @@ article p {
 #gitLvl {
     width: 30%;
     height: 3px;
-    background-color: purple;
+    background-color: rgb(33, 33, 33);
+}
+
+#bsLvl {
+    width: 10%;
+    height: 3px;
+    background-color: blueviolet;
 }
 
 /* Section */
@@ -856,6 +808,11 @@ article p {
 }
 
 #secGit {
+    border-top: 9px solid rgb(27, 27, 27);
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+#secBs {
     border-top: 9px solid purple;
     background-color: rgba(128, 0, 128, 0.3);
 }
@@ -941,7 +898,7 @@ article p {
 
 .aboutFl {
     font: 9vw bolder;
-    color: blue;
+    color: blue !important;
 }
 
 .aboutP {
@@ -1101,7 +1058,6 @@ form {
     border: 2px solid white;
     border-radius: 7px;
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
     resize: none;
 }
 
@@ -1111,7 +1067,6 @@ form {
 
 .contactTextarea::placeholder {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contactTextarea:hover::placeholder {
@@ -1126,12 +1081,14 @@ form {
     padding: 1vw;
     border: 2px solid white;
     border-radius: 7px;
+    color: white;
     background-color: black;
     font-weight: 900;
     cursor: pointer;
 }
 
 .send:hover {
+    font-size: large;
     background-color: navy;
 }
 
