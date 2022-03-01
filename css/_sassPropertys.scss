@@ -1,0 +1,56 @@
+$colorMain: black;
+$colorSecond: white;
+$colorDetails: blue;
+
+@mixin border {
+    border: 2px solid $colorSecond;
+}
+
+// @extend utilizado en myskills.html
+
+$skillCards: (
+    html: orangered,
+    css: blue,
+    js: yellow,
+    git: rgba(27, 27, 27, 0.9),
+    bs: blueviolet,
+);
+
+$skillCards-bg: (
+    html: rgba(255, 69, 0, 0.3),
+    css: rgba(0, 0, 255, 0.3),
+    js: rgba(255, 255, 0, 0.3),
+    git: rgba(33, 33, 33, 0.5),
+    bs: rgba(128, 0, 128, 0.3),
+);
+
+@each $tec, $color in $skillCards {
+    .skillsSection-#{$tec} {
+        width: 45%;
+        padding: 5px;
+        margin: 3vw 0vw;
+        background-color: $color;
+        border-top: 9px solid $color;
+        border-left: 1px solid $colorSecond;
+        border-right: 1px solid $colorSecond;
+        border-bottom: 1px solid $colorSecond;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+
+        h2 {
+            text-align: center;
+            padding: 0.5vw;
+        }
+        
+        p {
+            padding: 0.5vw 1vw;
+            font-size: 20px;
+            text-indent: 11px;
+        }
+    }
+}
+@each $tec, $bg in $skillCards-bg {
+    .skillsSection-#{$tec} {
+        background-color: $bg
+    };
+}
