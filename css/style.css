@@ -74,8 +74,8 @@
   width: 45%;
   padding: 5px;
   margin: 3vw 0vw;
-  background-color: rgba(27, 27, 27, 0.9);
-  border-top: 9px solid rgba(27, 27, 27, 0.9);
+  background-color: rgba(95, 95, 95, 0.9);
+  border-top: 9px solid rgba(95, 95, 95, 0.9);
   border-left: 1px solid white;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
@@ -131,7 +131,7 @@
 }
 
 .skillsSection-git {
-  background-color: rgba(33, 33, 33, 0.5);
+  background-color: rgba(95, 95, 95, 0.5);
 }
 
 .skillsSection-bs {
@@ -142,7 +142,7 @@
 * {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
-  font-family: 'Inconsolata', monospace !important;
+  font-family: 'Rockwell', monospace !important;
   color: white !important;
 }
 
@@ -175,7 +175,7 @@ a {
   width: 100%;
 }
 
-.navbar #logo {
+.navbar a #logo {
   width: 17vw;
   height: 17vw;
   margin-left: 3vw;
@@ -185,17 +185,27 @@ a {
           animation: spin 1s linear;
 }
 
-.navbar-toggler {
+.navbar .navbar-toggler {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-right: 5vw;
   padding: 1vw;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.navbar-toggler .navbar-toggler-icon {
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: none;
   width: 7vw;
   height: 7vw;
 }
 
-.navbar-collapse {
+.navbar .navbar-collapse {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -203,11 +213,7 @@ a {
   border-bottom-left-radius: 11px;
 }
 
-.navbar-collapse #select {
-  color: blue !important;
-}
-
-.navbar-collapse .nav-link {
+.navbar .navbar-collapse ul li .nav-link {
   display: block;
   width: 100%;
   font-size: 4.5vw;
@@ -221,7 +227,11 @@ a {
           animation: slidein 1s;
 }
 
-.navbar-collapse .nav-link:hover {
+.navbar .navbar-collapse ul li .nav-link:hover {
+  color: blue !important;
+}
+
+.navbar .navbar-collapse ul li #select {
   color: blue !important;
 }
 
@@ -241,7 +251,7 @@ a {
           justify-content: center;
 }
 
-.me {
+.indexMain .me {
   width: 100%;
   margin: 1.5rem 0rem 2rem 0rem;
   display: -webkit-box;
@@ -254,7 +264,7 @@ a {
           justify-content: center;
 }
 
-.textMe {
+.indexMain .me .textMe {
   width: 50%;
   font-size: 1.5rem;
   letter-spacing: 0.1em;
@@ -263,17 +273,17 @@ a {
   padding: 2% 0%;
 }
 
-.spanA, .spanM, .spanG {
+.indexMain .me .textMe .spanA, .indexMain .me .textMe .spanM, .indexMain .me .textMe .spanG {
   margin-right: 2%;
 }
 
-.imgAMG {
+.indexMain .me .textMe .spanA .imgAMG, .indexMain .me .textMe .spanM .imgAMG, .indexMain .me .textMe .spanG .imgAMG {
   width: 2.7rem;
   height: 2.7rem;
   margin-bottom: 23px;
 }
 
-.presentation {
+.indexMain .presentation {
   width: 100%;
   padding-top: 5px;
   border-radius: 7px;
@@ -281,12 +291,12 @@ a {
   border-bottom: 2px solid white;
 }
 
-.presentationH1 {
+.indexMain .presentation h1 {
   text-align: center;
   font-size: 2rem;
 }
 
-.presentationP {
+.indexMain .presentation p {
   margin-top: 1vh;
   padding: 5px;
   font-size: 1.3rem;
@@ -298,17 +308,17 @@ a {
   width: 90%;
 }
 
-.card {
+.container-fluid .card {
   width: 100%;
   text-align: center;
   margin-bottom: 15px;
+  border: 1px solid white;
   padding: 5px;
-  border: 2px solid white;
   border-radius: 11px;
   background-color: transparent;
 }
 
-.card-img-top {
+.container-fluid .card .card-img-top {
   margin: auto;
   border-radius: 50%;
   border: 3px solid black;
@@ -316,12 +326,12 @@ a {
   height: 100px;
 }
 
-.btn {
+.container-fluid .card div .btn {
   border: 2px solid white;
   border-radius: 11px;
 }
 
-.btn:hover {
+.container-fluid .card div .btn:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(navy), to(gray));
   background-image: linear-gradient(to right, navy, gray);
   -webkit-transform: scale(1.1);
@@ -339,25 +349,13 @@ a {
   border-top: 2px solid white;
 }
 
-.redes {
+.footer .redes {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.redescircle {
-  width: 12vw;
-  height: 12vw;
-  border-radius: 50%;
-  border: 1px solid white;
-}
-
-.redescircle:hover {
-  opacity: 0.7;
-  border: 3px solid black;
-}
-
-.redes ul {
+.footer .redes ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,55 +367,27 @@ a {
   margin: auto;
 }
 
-.redes ul li {
+.footer .redes ul li {
   margin: 0px 5px;
   padding: 5px;
 }
 
-.navfooter {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: auto;
-  font-weight: bolder;
+.footer .redes ul li a .redescircle {
+  width: 11vw;
+  height: 11vw;
+  border-radius: 50%;
 }
 
-.navfooter ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  padding: 0;
+.footer .redes ul li a .redescircle:hover {
+  opacity: 0.7;
+  border: 3px solid white;
 }
 
-.navfooter ul li {
-  border-radius: 4px;
-  font-size: 4vw;
-  padding: 1vw;
-}
-
-.navfooter ul li :hover {
-  color: blue !important;
-  -webkit-transition: 50ms;
-  transition: 50ms;
-}
-
-.copyright {
+.footer .copyright {
   font-size: 4vw;
   text-align: center;
   margin-top: 5px;
   padding-bottom: 10px;
-}
-
-.toTop {
-  display: none;
 }
 
 .imgToTop {
@@ -476,36 +446,32 @@ a {
 
 @media screen and (min-width: 480px) {
   /* Header */
-  .navbar #logo {
+  .navbar a #logo {
     width: 16vw;
     height: 16vw;
   }
-  .navbar-collapse .nav-link {
-    font-size: 3.5vw !important;
+  .navbar .navbar-collapse ul li .nav-link {
+    font-size: 3.5vw;
   }
   /* Main */
-  .textMe {
+  .indexMain .me .textMe {
     width: 33.33%;
     font-size: 5.3vw;
   }
-  .imgAMG {
+  .indexMain .me .textMe .spanA .imgAMG, .indexMain .me .textMe .spanM .imgAMG, .indexMain .me .textMe .spanG .imgAMG {
     width: 7.5vh;
     height: 7.5vh;
   }
-  .presentationP {
+  .indexMain .presentation p {
     font-size: 3.5vw;
   }
   /* Footer */
-  .redescircle {
+  .footer .redes ul li a .redescircle {
     width: 8vw;
     height: 8vw;
   }
-  .navfooter ul li {
-    font-size: 3.3vw;
-    padding: 5px 4px;
-  }
-  .copyright {
-    font-size: 2.7vw;
+  .footer .copyright {
+    font-size: 3.5vw;
     text-align: center;
     margin-top: 5px;
     padding-bottom: 10px;
@@ -518,28 +484,29 @@ a {
 
 @media screen and (min-width: 576px) {
   /* Header */
-  .navbar-brand {
+  .navbar a {
     width: 27%;
   }
-  .navbar #logo {
+  .navbar a #logo {
     width: 12vw;
     height: 12vw;
   }
-  .navbar-collapse #select {
-    color: white !important;
-    border-bottom: 3px solid blue;
-  }
-  .navbar-collapse .nav-link {
-    font-size: 3.3vw !important;
-    padding: 0vw 0vw;
+  .navbar .navbar-collapse ul li .nav-link {
+    font-size: 3vw;
+    margin: 0vw 0.5vw;
+    padding: 0vw 1vw;
     border: none;
   }
-  .imgToTop {
-    display: none;
+  .navbar .navbar-collapse ul li #select {
+    color: white !important;
+    border-bottom: 3px solid blue;
   }
   /* Section */
   .container-fluid {
     width: 90%;
+  }
+  .imgToTop {
+    display: none;
   }
 }
 
@@ -550,10 +517,7 @@ a {
     background-image: linear-gradient(to bottom, black 40%, grey);
   }
   /* Header */
-  .header {
-    padding: 0%;
-  }
-  .navbar #logo {
+  .navbar a #logo {
     width: 10vw;
     height: 10vw;
   }
@@ -566,13 +530,13 @@ a {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .me {
+  .indexMain .me {
     width: 45%;
     margin: 1.5rem 0rem 2rem 0rem;
     padding-left: 2vw;
     display: block;
   }
-  .textMe {
+  .indexMain .me .textMe {
     width: 100%;
     font-size: 6vw;
     letter-spacing: 0.1em;
@@ -586,28 +550,28 @@ a {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  .spanM {
+  .indexMain .me .textMe .spanA .imgAMG, .indexMain .me .textMe .spanM .imgAMG, .indexMain .me .textMe .spanG .imgAMG {
+    width: 3rem;
+    height: 3rem;
+  }
+  .indexMain .me .textMe .spanM {
     margin-left: 20%;
   }
-  .spanG {
+  .indexMain .me .textMe .spanG {
     margin-left: 40%;
   }
-  .imgAMG {
-    width: 6vw;
-    height: 6vw;
-  }
-  .presentation {
+  .indexMain .presentation {
     width: 45%;
     margin: auto;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .presentationH1 {
+  .indexMain .presentation h1 {
     text-align: center;
     font-size: 3.3vw;
   }
-  .presentationP {
+  .indexMain .presentation p {
     font-size: 2.2vw;
     text-align: left;
   }
@@ -623,27 +587,18 @@ a {
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  .card {
+  .secCards .card {
     width: 32%;
   }
   /* Footer */
-  .redescircle {
+  .footer .redes ul li {
+    margin: 0px 2vw;
+  }
+  .footer .redes ul li a .redescircle {
     width: 6vw;
     height: 6vw;
   }
-  .redes ul li {
-    margin: 0px 2vw;
-  }
-  .navfooter ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .navitem a {
-    font-size: 3vw;
-    margin: 0 1vw;
-  }
-  .copyright {
+  .footer .copyright {
     font-size: 2.5vw;
     margin-bottom: 2vw;
   }
@@ -651,47 +606,36 @@ a {
 
 @media screen and (min-width: 1024px) {
   /* Header */
-  .navbar .navbar-brand {
-    width: 48%;
+  .navbar a {
+    width: 47%;
   }
-  .navbar #logo {
+  .navbar a #logo {
     width: 7vw;
     height: 7vw;
   }
-  .navbar-collapse .nav-link {
-    font-size: 2.2vw !important;
+  .navbar .navbar-collapse ul li .nav-link {
+    font-size: 2.2vw;
   }
   /* Main */
-  .textMe {
+  .indexMain .me .textMe {
     font-size: 4.5vw;
   }
-  .imgAMG {
-    width: 4.5vw;
-    height: 4.5vw;
+  .indexMain .me .textMe .spanA .imgAMG, .indexMain .me .textMe .spanM .imgAMG, .indexMain .me .textMe .spanG .imgAMG {
+    width: 3.3rem;
+    height: 3.3rem;
   }
-  .presentationH1 {
+  .indexMain .presentation h1 {
     font-size: 2.7vw;
   }
-  .presentationP {
+  .indexMain .presentation p {
     font-size: 2vw;
   }
   /* Footer*/
-  .redes {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .redescircle {
+  .footer .redes ul li a .redescircle {
     width: 4vw;
     height: 4vw;
   }
-  .navfooter ul li {
-    padding: 0vw;
-  }
-  .navfooter li a {
-    font-size: 2vw;
-  }
-  .copyright {
+  .footer .copyright {
     font-size: 1.5vw;
     margin-bottom: 1vw;
   }
@@ -704,7 +648,7 @@ a {
   margin: auto;
 }
 
-.mainText {
+.portMain .mainText {
   width: 85%;
   margin: auto;
   margin-top: 5vw;
@@ -718,17 +662,18 @@ a {
   border-bottom-right-radius: 11px;
 }
 
-.mainText h1 {
+.portMain .mainText h1 {
   font-size: 6vw;
   margin-top: 1vw;
   margin-bottom: 3vw;
 }
 
-.mainText p {
+.portMain .mainText p {
   font-size: 5.5vw;
   margin-bottom: 5vw;
 }
 
+/* Section */
 .sectionWork {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,21 +683,21 @@ a {
   margin-bottom: 2vw;
 }
 
-.work {
+.sectionWork .work {
   width: 43vw;
   height: 43vw;
   margin: auto;
   margin-bottom: 2vw;
 }
 
-.worksimg {
+.sectionWork .work a .worksimg {
   width: 100%;
   height: 100%;
   border-radius: 11px;
   border: 2px solid white;
 }
 
-.worksimg:hover {
+.sectionWork .work a .worksimg:hover {
   opacity: 0.7;
   border: 3px solid blue;
   border-radius: 11px;
@@ -760,18 +705,23 @@ a {
 
 @media screen and (min-width: 480px) {
   /* Main */
-  .mainText h1 {
-    font-size: 3.7vw;
+  .portMain .mainText h1 {
+    font-size: 4.5vw;
     margin-bottom: 3vw;
   }
-  .mainText p {
+  .portMain .mainText p {
     font-size: 3.7vw;
     margin-bottom: 1vw;
   }
-  .work {
-    width: 28vw;
-    height: 28vw;
-    margin: auto;
+  /* Section */
+  .sectionWork {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sectionWork .work {
+    width: 38vw;
+    height: 38vw;
     margin-left: 1vw;
     margin-right: 1vw;
     margin-bottom: 2vw;
@@ -780,19 +730,20 @@ a {
 
 @media screen and (min-width: 768px) {
   /* Main */
-  .mainText {
+  .portMain .mainText {
     margin-top: 2.7vw;
     margin-bottom: 2.7vw;
   }
-  .mainText h1 {
+  .portMain .mainText h1 {
     font-size: 3vw;
     margin-bottom: 3vw;
   }
-  .mainText p {
+  .portMain .mainText p {
     font-size: 3vw;
     margin-bottom: 1vw;
   }
-  .work {
+  /* Section */
+  .sectionWork .work {
     width: 27vw;
     height: 27vw;
     margin: auto;
@@ -802,23 +753,26 @@ a {
 
 @media screen and (min-width: 1024px) {
   /* Main */
-  .mainText h1 {
+  .portMain {
+    /* Section */
+  }
+  .portMain .mainText h1 {
     text-align: center;
     font-size: 2.2vw;
     margin-bottom: 2vw;
   }
-  .mainText p {
+  .portMain .mainText p {
     font-size: 1.9vw;
     margin-bottom: 1vw;
     text-align: center;
   }
-  .sectionWork {
+  .portMain .sectionWork {
     margin: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .work {
+  .portMain .sectionWork .work {
     width: 22vw;
     height: 22vw;
     margin: auto;
@@ -835,7 +789,7 @@ a {
   margin: auto;
 }
 
-.skillsText {
+.skillsMain .skillsText {
   text-align: center;
   width: 85%;
   margin: auto;
@@ -847,94 +801,13 @@ a {
   border-radius: 7px;
 }
 
-.skillsText h1 {
-  font-size: 9vw;
+.skillsMain .skillsText h1 {
+  font-size: 7.5vw;
 }
 
-.skillsText p {
+.skillsMain .skillsText p {
   margin: 2vw 0vw;
-  font-size: 6vw;
-}
-
-.skillsIndicator {
-  width: 85%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: auto;
-  padding: 10px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 3vw;
-  margin-bottom: 5vw;
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 7px;
-}
-
-.divIndicator {
-  width: 45%;
-  padding: 5px;
-}
-
-.spanIndicator {
-  font-weight: bolder;
-  padding: 5px;
-}
-
-#secIndHtml, #secIndCss, #secIndJs, #secIndGit, #secIndBs {
-  border: 1px solid orangered;
-  border-radius: 11px;
-  margin-top: 3px;
-}
-
-#secIndCss {
-  border: 1px solid blue;
-}
-
-#secIndJs {
-  border: 1px solid yellow;
-}
-
-#secIndGit {
-  border: 1px solid #1b1b1b;
-}
-
-#secIndBs {
-  border: 1px solid blueviolet;
-}
-
-#htmlLvl {
-  width: 60%;
-  height: 3px;
-  background-color: orangered;
-}
-
-#cssLvl {
-  width: 30%;
-  height: 3px;
-  background-color: blue;
-}
-
-#jsLvl {
-  width: 10%;
-  height: 3px;
-  background-color: yellow;
-}
-
-#gitLvl {
-  width: 30%;
-  height: 3px;
-  background-color: #212121;
-}
-
-#bsLvl {
-  width: 10%;
-  height: 3px;
-  background-color: blueviolet;
+  font-size: 5vw;
 }
 
 /* Section */
@@ -952,12 +825,34 @@ a {
           justify-content: space-evenly;
 }
 
+.skillsDivSection .skillsSection {
+  width: 90%;
+}
+
+.skillsDivSection .skillsSection .imgSkillsCard {
+  display: block;
+  margin: auto;
+}
+
+.skillsDivSection .skillsSection .divGit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsDivSection .skillsSection .divGit img {
+  margin: 0 2vw;
+}
+
 @media screen and (min-width: 480px) {
   /* Main */
-  .skillsText h1 {
+  .skillsMain .skillsText h1 {
     font-size: 6.5vw;
   }
-  .skillsText p {
+  .skillsMain .skillsText p {
     margin: 2vw 0vw;
     font-size: 4vw;
   }
@@ -965,28 +860,29 @@ a {
 
 @media screen and (min-width: 768px) {
   /* Main */
-  .skillsText {
+  .skillsMain .skillsText {
     margin-top: 3vw;
     margin-bottom: 3vw;
   }
-  .skillsText h1 {
+  .skillsMain .skillsText h1 {
     font-size: 3.7vw;
   }
-  .skillsText p {
+  .skillsMain .skillsText p {
     margin: 1vw 0vw;
     font-size: 2.5vw;
   }
-  .skillsIndicator {
-    margin-bottom: 1vw;
+  /* Section */
+  .skillsDivSection .skillsSection {
+    width: 45%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   /* Main */
-  .skillsText h1 {
+  .skillsMain .skillsText h1 {
     font-size: 2.7vw;
   }
-  .skillsText p {
+  .skillsMain .skillsText p {
     margin: 1vw 0vw;
     font-size: 2vw;
   }
@@ -994,7 +890,7 @@ a {
 
 /*              ABOUT               */
 /* Main */
-.divFoto {
+.aboutMain .divFoto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,24 +904,19 @@ a {
           justify-content: center;
 }
 
-.foto {
+.aboutMain .divFoto .foto {
   border-radius: 50%;
   margin: 3vw 0vw;
   border: 2px solid black;
 }
 
-.aboutH1 {
+.aboutMain div h1 {
   text-align: center;
   padding: 1vw;
   margin: 3vw 0vw;
 }
 
-.aboutFl {
-  font: 9vw bolder;
-  color: blue !important;
-}
-
-.aboutP {
+.aboutMain div p {
   width: 85%;
   margin: auto;
   margin-bottom: 5vw;
@@ -1037,55 +928,60 @@ a {
   border-bottom-left-radius: 11px;
 }
 
+.aboutMain div p .aboutFl {
+  font: 9vw bolder;
+  color: blue !important;
+}
+
 @media screen and (min-width: 480px) {
   /* Main */
-  .aboutH1 {
+  .aboutMain div h1 {
     font-size: 5vw;
     margin: 0vw 0vw 3vw 0vw;
   }
-  .aboutFl {
-    font-size: 7vw;
-  }
-  .aboutP {
+  .aboutMain div p {
     font-size: 4vw;
+  }
+  .aboutMain div p .aboutFl {
+    font-size: 7vw;
   }
 }
 
 @media screen and (min-width: 768px) {
   /* Main */
-  .aboutH1 {
+  .aboutMain div h1 {
     font-size: 4.5vw;
     margin: 0vw 0vw 3vw 0vw;
   }
-  .aboutFl {
-    font-size: 5vw;
-  }
-  .aboutP {
+  .aboutMain div p {
     font-size: 3vw;
     padding: 0vw 2vw;
     border-left: 5px solid blue;
+  }
+  .aboutMain div p .aboutFl {
+    font-size: 5vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   /* Main */
-  .foto {
+  .aboutMain .divFoto .foto {
     margin: 3vw 0vw 2vw 0vw;
   }
-  .aboutH1 {
+  .aboutMain div h1 {
     font-size: 3vw;
     margin-bottom: 1vw;
   }
-  .aboutFl {
-    font-size: 4vw;
-    color: blue;
-  }
-  .aboutP {
+  .aboutMain div p {
     font-size: 2vw;
     margin-bottom: 3vw;
     padding: 0vw 1vw;
     text-indent: 2vw;
     border-left: 5px solid blue;
+  }
+  .aboutMain div p .aboutFl {
+    font-size: 4vw;
+    color: blue;
   }
 }
 
@@ -1102,7 +998,7 @@ a {
           justify-content: center;
 }
 
-.contactText {
+.contactMain .contactText {
   width: 85%;
   margin: 7vw 0vw;
   text-align: center;
@@ -1111,24 +1007,24 @@ a {
   border-bottom: 2px solid white;
 }
 
-.contactH1 {
+.contactMain .contactText h1 {
   font-size: 8vw;
   padding: 1vw 0vw;
 }
 
-.contactP {
+.contactMain .contactText p {
   font-size: 5.7vw;
   font-weight: bold;
   margin: 1vw 0vw;
   padding: 1vw 0vw;
 }
 
-.divForm {
+.divGeneral .divForm {
   width: 90%;
   margin: auto;
 }
 
-form {
+.divGeneral .divForm form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1136,7 +1032,7 @@ form {
       flex-wrap: wrap;
 }
 
-.div1 {
+.divGeneral .divForm form .div1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,7 +1043,7 @@ form {
   margin-bottom: 1vw;
 }
 
-.contactInput1 {
+.divGeneral .divForm form .div1 .contactInput1 {
   width: 47%;
   padding: 1vw;
   margin-bottom: 1vw;
@@ -1156,27 +1052,27 @@ form {
   background-color: black;
 }
 
-.contactInput1:focus {
+.divGeneral .divForm form .div1 .contactInput1:focus {
   outline: none;
 }
 
-.contactInput1:hover::-webkit-input-placeholder {
+.divGeneral .divForm form .div1 .contactInput1:hover::-webkit-input-placeholder {
   color: blue;
 }
 
-.contactInput1:hover:-ms-input-placeholder {
+.divGeneral .divForm form .div1 .contactInput1:hover:-ms-input-placeholder {
   color: blue;
 }
 
-.contactInput1:hover::-ms-input-placeholder {
+.divGeneral .divForm form .div1 .contactInput1:hover::-ms-input-placeholder {
   color: blue;
 }
 
-.contactInput1:hover::placeholder {
+.divGeneral .divForm form .div1 .contactInput1:hover::placeholder {
   color: blue;
 }
 
-.contactInput {
+.divGeneral .divForm form .contactInput {
   width: 100%;
   padding: 1vw;
   margin-bottom: 1.5vw;
@@ -1185,27 +1081,27 @@ form {
   background-color: black;
 }
 
-.contactInput:focus {
+.divGeneral .divForm form .contactInput:focus {
   outline: none;
 }
 
-.contactInput:hover::-webkit-input-placeholder {
+.divGeneral .divForm form .contactInput:hover::-webkit-input-placeholder {
   color: blue;
 }
 
-.contactInput:hover:-ms-input-placeholder {
+.divGeneral .divForm form .contactInput:hover:-ms-input-placeholder {
   color: blue;
 }
 
-.contactInput:hover::-ms-input-placeholder {
+.divGeneral .divForm form .contactInput:hover::-ms-input-placeholder {
   color: blue;
 }
 
-.contactInput:hover::placeholder {
+.divGeneral .divForm form .contactInput:hover::placeholder {
   color: blue;
 }
 
-.contactTextarea {
+.divGeneral .divForm form .contactTextarea {
   width: 100%;
   padding: 1vw;
   margin-bottom: 2vw;
@@ -1215,43 +1111,43 @@ form {
   resize: none;
 }
 
-.contactTextarea:focus {
+.divGeneral .divForm form .contactTextarea:focus {
   outline: none;
 }
 
-.contactTextarea::-webkit-input-placeholder {
+.divGeneral .divForm form .contactTextarea::-webkit-input-placeholder {
   font-weight: bold;
 }
 
-.contactTextarea:-ms-input-placeholder {
+.divGeneral .divForm form .contactTextarea:-ms-input-placeholder {
   font-weight: bold;
 }
 
-.contactTextarea::-ms-input-placeholder {
+.divGeneral .divForm form .contactTextarea::-ms-input-placeholder {
   font-weight: bold;
 }
 
-.contactTextarea::placeholder {
+.divGeneral .divForm form .contactTextarea::placeholder {
   font-weight: bold;
 }
 
-.contactTextarea:hover::-webkit-input-placeholder {
+.divGeneral .divForm form .contactTextarea:hover::-webkit-input-placeholder {
   color: blue;
 }
 
-.contactTextarea:hover:-ms-input-placeholder {
+.divGeneral .divForm form .contactTextarea:hover:-ms-input-placeholder {
   color: blue;
 }
 
-.contactTextarea:hover::-ms-input-placeholder {
+.divGeneral .divForm form .contactTextarea:hover::-ms-input-placeholder {
   color: blue;
 }
 
-.contactTextarea:hover::placeholder {
+.divGeneral .divForm form .contactTextarea:hover::placeholder {
   color: blue;
 }
 
-.send {
+.divGeneral .divForm form .send {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1269,77 +1165,77 @@ form {
   cursor: pointer;
 }
 
-.send:hover {
+.divGeneral .divForm form .send:hover {
   font-size: large;
   background-color: blue;
 }
 
-::-webkit-input-placeholder {
+.divGeneral .divForm form ::-webkit-input-placeholder {
   color: white;
   font-weight: bold;
 }
 
-:-ms-input-placeholder {
+.divGeneral .divForm form :-ms-input-placeholder {
   color: white;
   font-weight: bold;
 }
 
-::-ms-input-placeholder {
+.divGeneral .divForm form ::-ms-input-placeholder {
   color: white;
   font-weight: bold;
 }
 
-::placeholder {
+.divGeneral .divForm form ::placeholder {
   color: white;
   font-weight: bold;
 }
 
-.contactMap {
+.divGeneral .contactMap {
   display: none;
 }
 
 @media screen and (min-width: 480px) {
   /* Main */
-  .contactText {
+  .contactMain .contactText {
     margin: 4vw;
   }
-  .contactH1 {
+  .contactMain .contactText h1 {
     font-size: 5.5vw;
   }
-  .contactP {
+  .contactMain .contactText p {
     font-size: 3.5vw;
   }
 }
 
 @media screen and (min-width: 768px) {
   /* Main */
-  .contactText {
+  .contactMain .contactText {
     margin: 2vw 0vw 3vw 0vw;
   }
-  .contactH1 {
+  .contactMain .contactText h1 {
     font-size: 4vw;
     padding: 0.5vw;
   }
-  .contactP {
+  .contactMain .contactText p {
     font-size: 2.5vw;
     padding: 0.5vw;
   }
   .divGeneral {
-    width: 90%;
+    width: 80%;
     padding: 1vw 0;
-    margin-bottom: 1vw;
+    margin-bottom: 0vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .divForm {
+  .divGeneral .divForm {
     width: 50%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     margin-right: 3vw;
   }
-  .contactMap {
+  .divGeneral .contactMap {
     display: inherit;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1349,27 +1245,29 @@ form {
     height: fit-content;
     margin-right: 1vw;
     border: 3px solid white;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
   }
-  .contactMap iframe {
-    width: 40vw;
+  .divGeneral .contactMap iframe {
+    width: 35w;
     height: 40vw;
     border: 3px solid white;
   }
-  .contactMap:hover {
+  .divGeneral .contactMap:hover {
     border: 3px solid blue;
   }
 }
 
 @media screen and (min-width: 1024px) {
   /* Main */
-  .contactText {
+  .contactMain .contactText {
     margin: 2vw 0vw 3vw 0vw;
   }
-  .contactH1 {
+  .contactMain .contactText h1 {
     font-size: 2.7vw;
     padding: 0.5vw;
   }
-  .contactP {
+  .contactMain .contactText p {
     font-size: 1.7vw;
     padding: 0vw;
   }
@@ -1377,28 +1275,28 @@ form {
     width: 80%;
     padding-bottom: 0%;
   }
-  .divForm {
+  .divGeneral .divForm {
     width: 50%;
     padding-left: 1vw;
   }
-  .contactInput1 {
+  .divGeneral .divForm form .div1 .contactInput1 {
     padding: 0.5vw;
     margin-bottom: 0vw;
     font-size: 1.3vw;
   }
-  .contactInput {
+  .divGeneral .divForm form .contactInput {
     padding: 0.5vw;
     margin-bottom: 1vw;
     font-size: 1.3vw;
   }
-  .contactTextarea {
+  .divGeneral .divForm form .contactTextarea {
     padding: 0.5vw;
     margin-bottom: 2vw;
     font-size: 1.3vw;
   }
-  .contactMap iframe {
-    width: 35vw;
-    height: 35vw;
+  .divGeneral .contactMap iframe {
+    width: 29vw;
+    height: 29vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
