@@ -569,10 +569,10 @@ a {
   }
   .indexMain .presentation h1 {
     text-align: center;
-    font-size: 3.3vw;
+    font-size: 3vw;
   }
   .indexMain .presentation p {
-    font-size: 2.2vw;
+    font-size: 2vw;
     text-align: left;
   }
   /* Section */
@@ -614,21 +614,21 @@ a {
     height: 7vw;
   }
   .navbar .navbar-collapse ul li .nav-link {
-    font-size: 2.2vw;
+    font-size: 2vw;
   }
   /* Main */
   .indexMain .me .textMe {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
   .indexMain .me .textMe .spanA .imgAMG, .indexMain .me .textMe .spanM .imgAMG, .indexMain .me .textMe .spanG .imgAMG {
     width: 3.3rem;
     height: 3.3rem;
   }
   .indexMain .presentation h1 {
-    font-size: 2.7vw;
+    font-size: 2.2vw;
   }
   .indexMain .presentation p {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   /* Footer*/
   .footer .redes ul li a .redescircle {
@@ -758,8 +758,8 @@ a {
   }
   .portMain .mainText h1 {
     text-align: center;
-    font-size: 2.2vw;
-    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-bottom: 1.7vw;
   }
   .portMain .mainText p {
     font-size: 1.9vw;
@@ -880,11 +880,11 @@ a {
 @media screen and (min-width: 1024px) {
   /* Main */
   .skillsMain .skillsText h1 {
-    font-size: 2.7vw;
+    font-size: 2.2vw;
   }
   .skillsMain .skillsText p {
     margin: 1vw 0vw;
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
 }
 
@@ -969,18 +969,18 @@ a {
     margin: 3vw 0vw 2vw 0vw;
   }
   .aboutMain div h1 {
-    font-size: 3vw;
+    font-size: 2.7vw;
     margin-bottom: 1vw;
   }
   .aboutMain div p {
-    font-size: 2vw;
+    font-size: 1.8vw;
     margin-bottom: 3vw;
     padding: 0vw 1vw;
     text-indent: 2vw;
     border-left: 5px solid blue;
   }
   .aboutMain div p .aboutFl {
-    font-size: 4vw;
+    font-size: 3.5vw;
     color: blue;
   }
 }
@@ -1054,6 +1054,7 @@ a {
 
 .divGeneral .divForm form .div1 .contactInput1:focus {
   outline: none;
+  letter-spacing: 1px;
 }
 
 .divGeneral .divForm form .div1 .contactInput1:hover::-webkit-input-placeholder {
@@ -1083,6 +1084,7 @@ a {
 
 .divGeneral .divForm form .contactInput:focus {
   outline: none;
+  letter-spacing: 1px;
 }
 
 .divGeneral .divForm form .contactInput:hover::-webkit-input-placeholder {
@@ -1113,6 +1115,7 @@ a {
 
 .divGeneral .divForm form .contactTextarea:focus {
   outline: none;
+  letter-spacing: 1px;
 }
 
 .divGeneral .divForm form .contactTextarea::-webkit-input-placeholder {
@@ -1264,11 +1267,11 @@ a {
     margin: 2vw 0vw 3vw 0vw;
   }
   .contactMain .contactText h1 {
-    font-size: 2.7vw;
+    font-size: 2.5vw;
     padding: 0.5vw;
   }
   .contactMain .contactText p {
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     padding: 0vw;
   }
   .divGeneral {

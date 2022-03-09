@@ -431,11 +431,11 @@ a {
 
             h1 {
                 text-align: center;
-                font-size: 3.3vw;
+                font-size: 3vw;
             }
 
             p {
-                font-size: 2.2vw;
+                font-size: 2vw;
                 text-align: left;
             }
         }
@@ -494,7 +494,7 @@ a {
             ul {
                 li {
                     .nav-link {
-                        font-size: 2.2vw;
+                        font-size: 2vw;
                     }
                 }
             }
@@ -505,7 +505,7 @@ a {
     .indexMain {
         .me {
             .textMe {
-                font-size: 4.5vw;
+                font-size: 4vw;
 
                 .spanA, .spanM, .spanG {
                     .imgAMG {
@@ -518,11 +518,11 @@ a {
         
         .presentation {
             h1 {
-                font-size: 2.7vw;
+                font-size: 2.2vw;
             }
 
             p {
-                font-size: 2vw;
+                font-size: 1.8vw;
             }
         }
     }
@@ -675,8 +675,8 @@ a {
         .mainText {
             h1 {
                 text-align: center;
-                font-size: 2.2vw;
-                margin-bottom: 2vw;
+                font-size: 2vw;
+                margin-bottom: 1.7vw;
             }
             
             p {
@@ -805,12 +805,12 @@ a {
     .skillsMain {
         .skillsText {
             h1 {
-                font-size: 2.7vw;
+                font-size: 2.2vw;
             }
             
             p {
                 margin: 1vw 0vw;
-                font-size: 2vw;
+                font-size: 1.7vw;
             }
         }
     }
@@ -912,19 +912,19 @@ a {
 
         div {
             h1 {
-                font-size: 3vw;
+                font-size: 2.7vw;
                 margin-bottom: 1vw;
             }
 
             p {
-                font-size: 2vw;
+                font-size: 1.8vw;
                 margin-bottom: 3vw;
                 padding: 0vw 1vw;
                 text-indent: 2vw;
                 border-left: 5px solid $colorDetails;
 
                 .aboutFl {
-                    font-size: 4vw;
+                    font-size: 3.5vw;
                     color: $colorDetails;
                 }
             }
@@ -987,6 +987,7 @@ a {
                 
                 .contactInput1:focus {
                     outline: none;
+                    letter-spacing: 1px;
                 }
     
                 .contactInput1:hover::placeholder {
@@ -1005,6 +1006,7 @@ a {
             
             .contactInput:focus {
                 outline: none;
+                letter-spacing: 1px;
             }
     
             .contactInput:hover::placeholder {
@@ -1023,6 +1025,7 @@ a {
             
             .contactTextarea:focus {
                 outline: none;
+                letter-spacing: 1px;
             }
             
             .contactTextarea::placeholder {
@@ -1140,12 +1143,12 @@ a {
             margin: 2vw 0vw 3vw 0vw;
 
             h1 {
-                font-size: 2.7vw;
+                font-size: 2.5vw;
                 padding: 0.5vw;
             }
             
             p {
-                font-size: 1.7vw;
+                font-size: 1.5vw;
                 padding: 0vw;
             }
         }
