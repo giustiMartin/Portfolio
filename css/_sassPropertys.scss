@@ -11,17 +11,19 @@ $colorDetails: blue;
 $skillCards: (
     html: orangered,
     css: blue,
+    bs: blueviolet,
+    sass: rgb(205, 103, 153),
     js: yellow,
     git: rgba(95, 95, 95, 0.9),
-    bs: blueviolet,
 );
 
 $skillCards-bg: (
     html: rgba(255, 69, 0, 0.3),
     css: rgba(0, 0, 255, 0.3),
+    bs: rgba(128, 0, 128, 0.3),
+    sass: rgba(205, 103, 153, 0.3),
     js: rgba(255, 255, 0, 0.3),
     git: rgba(95, 95, 95, 0.5),
-    bs: rgba(128, 0, 128, 0.3),
 );
 
 @each $tec, $color in $skillCards {
@@ -49,6 +51,7 @@ $skillCards-bg: (
         }
     }
 }
+
 @each $tec, $bg in $skillCards-bg {
     .skillsSection-#{$tec} {
         background-color: $bg
